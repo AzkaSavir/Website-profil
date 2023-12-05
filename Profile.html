@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Website</title>
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        width: 100vw;
+        height: 10vh;
+        background-color: #6528F7;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .navbar-brand {
+        width: 40%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-item {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        list-style-type: none;
+
+    }
+
+    li {
+        display: inline;
+        margin: 10px;
+    }
+
+    li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        background: rgb(0, 166, 255);
+        width: 100%;
+        left: 0;
+        top: 80px;
+        padding: 10px;
+    }
+
+    .dropdown li {
+        list-style: none;
+    }
+
+    .dropdown li a {
+        text-decoration: none;
+    }
+
+    .toggle:hover .dropdown {
+        display: block;
+    }
+
+    @media screen and (max-width:768px) {
+        .navbar-item {
+            display: none;
+        }
+
+        .toggle {
+            display: block;
+        }
+
+        .img-brand {
+            display: none;
+        }
+
+        .toggle {
+            display: block;
+        }
+
+    }
+
+    /* bagian hero 1 */
+    .hero {
+        width: 100vw;
+        height: 90vh;
+        background: linear-gradient(to bottom, #6528F7, #A076F9);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .area-tittle {
+        width: 40%;
+        margin-bottom: 100px;
+        padding: 100px;
+
+    }
+
+    .text-tittle {
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        font-family: Copperplate, Papyrus, fantasy;
+
+    }
+
+    .text-tagline {
+        font-size: 1.5em;
+        margin-top: 30px;
+        color: white;
+
+    }
+
+    .button-explore {
+        margin-top: 50px;
+    }
+
+    .btn-explore {
+        background-color: #D7BBF5;
+        padding: 10px 30px;
+        border-radius: 1000px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .area-image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .home-item {
+        padding: 10px 20px;
+        background: #D7BBF5;
+        border-radius: 1000px;
+        color: #000000;
+    }
+
+    /* slide 2 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbarr {
+        width: 100vw;
+        height: 10vh;
+        background-color: #A076F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .navbar-brandd {
+        
+        width: 98%;
+        height: 80%;
+        background-color: #6528F7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    /* bagian hero 2 */
+    .experiense {
+        width: 100vw;
+        height: 120vh;
+        background-color: #A076F9;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        text-align: center;
+
+    }
+
+    .card {
+        background-color: aliceblue;
+        margin: 10px;
+        border-radius: 30px;
+    }
+
+    .card:nth-child(1){
+        background-image: url('img1.png');
+        background-size: cover;
+        position: center;
+    }
+    .card:nth-child(2){
+        background-image: url('img2.png');
+        background-size: cover;
+        position: center;
+    }
+    .card:nth-child(3){
+        background-image: url('img3.png');
+        background-size: cover;
+        position: center;
+    }
+    .card:nth-child(4){
+        background-image: url('img4.png');
+        background-size: cover;
+        position: center;
+    }
+    .card:nth-child(5){
+        background-image: url('img5.png');
+        background-size: cover;
+        position: center;
+    }
+    .card:nth-child(6){
+        background-image: url('img6.png');
+        background-size: cover;
+        position: center;
+    }
+
+    .button-explore2 {
+        margin-top: 50px;
+    }
+    
+    .bawahan {
+        width: 100vw;
+        height: 10vh;
+        background-color: #A076F9;
+        display: flex;
+
+    }
+
+    .bawahnya {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .btn-explore2 {
+        background-color: #D7BBF5;
+        padding: 10px 30px;
+        border-radius: 15px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin-left: 55px;
+        align-items: center;
+        font-size: x-large;
+        font-weight: bolder;
+    }
+
+    
+    
+
+    /* slide 3*/
+    .text-titttle {
+        font-size: 2cm;
+        font-weight: bold;
+        color: white;
+    }
+
+    .hero3 {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to bottom, #A076F9, #6528F7);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* slide 4*/
+
+    .navbarrr {
+        width: 100vw;
+        height: 10vh;
+        background-color: #6528F7;
+        display: flex;
+        
+    }
+
+    .navbar-branddd {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    /* bagian hero 4 */
+    .hero-slide4 {
+        width: 100vw;
+        height: 90vh;
+        background: #6528F7;
+        display: flex;
+        justify-content: space-around;
+        
+
+    }
+
+    .kotak-slide3 {
+        width: 30%;
+        height: 80%;
+        background-color: rgb(255, 255, 255);
+        font-size: small;
+    }
+
+    .kotak-kecil {
+        width: 100%;
+        height: 80%;
+        background: url(Gunung-dingin.jpg);
+        background-size: cover;
+        
+    }
+
+    .kotak-kecil2 {
+        width: 100%;
+        height: 80%;
+        background: url(Padang-pasir.jpeg);
+        background-size: cover;
+    }
+
+    /* slide 5*/
+    .area-tittlee {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+    }
+
+    .text-titttle {
+        font-size: 2cm;
+        font-weight: bold;
+        color: white;
+    }
+
+    .hero {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to bottom, #6528F7, #A076F9);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* form */
+
+    .containerr {
+
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .panel {
+        width: 60%;
+        height: 60%;
+        padding: 20px;
+
+    }
+
+    fieldset {
+        width: 100%;
+        background-color: white;
+        border: none;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.302);
+        border-radius: 20px;
+
+    }
+
+    legend {
+        text-align: left;
+        background-color: rgb(255, 255, 255);
+        padding: 15px;
+        font-size: xx-large;
+        font-weight: 30px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.289);
+        border-radius: 200px;
+    }
+
+    form {
+        width: 90%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    input {
+        width: 100%;
+        padding: 40px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <img src="Logo-navbar.png" alt="" width="25%">
+
+        </div>
+        <div class="navbar-item">
+            <div class="list-item">
+                <ul>
+                    <li><a class="home-item" href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacte</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="toggle">
+            <a href="a"><b>=</b></a>
+            <ul class="dropdown">
+                <li><a href="a">home</a></li>
+                <li><a href="a">home</a></li>
+                <li><a href="a">home</a></li>
+                <li><a href="a">home</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="area-tittle">
+            <div class="text-tittle">
+                <p>Hi, i am azka</p>
+            </div>
+            <div class="text-tagline">
+                <p>	Hello My Name is Azka Savir Fauzie I'm 12 years old, and I'm a student of IDN Boarding School.</p>
+            </div>
+            <div class="button-explore">
+                <a href="ModernForm.html" class="btn-explore"> hire me</a>
+            </div>
+        </div>
+        <div class="area-image">
+            <div class="img-brand">
+                <img src="Logo-Azka.png" alt="" width="600px">
+            </div>
+        </div>
+    </div>
+    <!-- slide 2 -->
+    <div class="navbarr">
+        <div class="navbar-brandd">
+            <h1>experiense</h1>
+        </div>
+    </div>
+    <div class="navbarr">
+        <div class="navbar-brandd">
+            <h1>Project</h1>
+        </div>
+
+    </div>
+    <div class="experiense">
+        <div class="card">
+        </div>
+        <div class="card">
+        </div>
+        <div class="card">
+        </div>
+        <div class="card">
+        </div>
+        <div class="card">
+        </div>
+        <div class="card">
+        </div>
+    </div>
+    <div class="bawahan">
+        <div class="bawahnya">
+            <div class="button-explore2">
+                <a href="ModernForm.html" class="btn-explore2"> See More</a>
+            </div>
+        </div>
+    </div>
+    <!-- slide 3 -->
+    </div>
+    <div class="hero3">
+        <div class="area-tittle">
+            <div class="text-titttle">
+                <p>About ME</p>
+            </div>
+            <div class="text-tagline">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nemo consequuntur aliquid odit
+                    assumenda, dolor nesciunt nulla perspiciatis sit repellendus.</p>
+            </div>
+            <div class="button-explore">
+                <a href="http://azkasavir.blogspot.com/" class="btn-explore"> read more</a>
+            </div>
+        </div>
+        <div class="area-image">
+            <div class="img-brand">
+                <img src="Azka-Kecil.png" alt="" width="900px">
+            </div>
+        </div>
+    </div>
+    <!-- slide 4 -->
+    <div class="navbarrr">
+        <div class="navbar-branddd">
+            <h1>Blog</h1>
+        </div>
+
+    </div>
+    <div class="hero-slide4">
+        <div class="kotak-slide3">
+            <div class="kotak-kecil"></div>
+            <h1>-  Gunung apa paling dingin?</h1>
+            <p>- Menurut satelit Observatorium Bumi NASA, tempat terdingin di Bumi adalah punggung gunung di Dataran Tinggi Antartika Timur di mana suhu bisa turun hingga -135,8 derajat Fahrenheit (-93,2 derajat Celcius)</p>
+        </div>
+        <div class="kotak-slide3">
+            <div class="kotak-kecil2"></div>
+            <h1>-  Seperti apa rasanya di padang pasir?</h1>
+            <p>- Gersang, panas, kering, tak ada tanda-tanda kehidupan. Saya pun dulu berpikiran sama karena gurun memang dipenuhi dengan gurun pasir, namun saat ini kita bisa melakukan berbagai aktivitas di gurun pasir,</p>
+        </div>
+        <!-- slide 5 -->
+    </div>
+    <div class="hero">
+        <div class="area-tittlee">
+            <div class="containerr">
+                <div class="panel">
+                    <fieldset>
+                        <legend>Contact Us</legend>
+                        <form action="s" method="post">
+                            <input type required="text" placeholder="masukan nama">
+                            <input type required="email" placeholder="masukan Email">
+                            <input type required="text" placeholder="phone number">
+                            <input type required="text" placeholder="massage">
+                            <input type="submit" class="btn login" value="send">
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="area-image">
+            <div class="img-brand">
+                <img src="Screenshot 2023-08-13 at 9.16.41 PM.png" alt="" width="800px">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
